@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Not found — Cuong Giang</title>
+  <meta name="robots" content="noindex">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400..700&family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&display=swap">
+  <link rel="stylesheet" href="/assets/site.css">
+  <script>
+    try {
+      var theme = localStorage.getItem("theme");
+      if (theme === "light" || theme === "dark") document.documentElement.dataset.theme = theme;
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="Cuong Giang, home">cuonggt<span class="caret" aria-hidden="true"></span></a>
+  </header>
+
+  <main class="notfound" id="main">
+    <p class="shell"><b>$</b> cd <span data-path>this-page</span><br>cd: no such file or directory: <span data-path>this-page</span></p>
+    <h1>Nothing here.</h1>
+    <p class="lede">The page may have moved, or it never existed. <a href="/">cd ~</a> goes back home.</p>
+  </main>
+
+  <script>
+    var path = location.pathname;
+    try { path = decodeURIComponent(path); } catch (e) {}
+    path = path.replace(/^\//, "") || "this-page";
+    document.querySelectorAll("[data-path]").forEach(function (el) { el.textContent = path; });
+  </script>
+</body>
+</html>

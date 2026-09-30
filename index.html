@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cuong Giang — software writer</title>
+  <meta name="description" content="Cuong Giang, a software writer in Hà Nội, makes keyboard-driven terminal tools in Go, a Go web framework for Inertia.js, and packages for Laravel and Rails.">
+  <link rel="canonical" href="https://thaicuong.me/">
+  <meta name="author" content="Cuong Giang">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#F5F2EA" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#131210" media="(prefers-color-scheme: dark)">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://thaicuong.me/">
+  <meta property="og:title" content="Cuong Giang — software writer">
+  <meta property="og:description" content="Keyboard-driven terminal tools in Go, a Go web framework for Inertia.js, and packages for Laravel and Rails.">
+  <meta property="og:image" content="https://thaicuong.me/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@cuonggt">
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400..700&family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&display=swap">
+  <link rel="stylesheet" href="assets/site.css">
+
+  <script>
+    try {
+      var theme = localStorage.getItem("theme");
+      if (theme === "light" || theme === "dark") document.documentElement.dataset.theme = theme;
+      if (localStorage.getItem("shortcuts") === "off") document.documentElement.classList.add("shortcuts-off");
+    } catch (e) {}
+    document.documentElement.classList.add("js");
+  </script>
+  <script src="assets/site.js" defer></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Cuong Giang",
+    "url": "https://thaicuong.me/",
+    "description": "Software writer",
+    "homeLocation": { "@type": "Place", "name": "Hà Nội, Việt Nam" },
+    "sameAs": ["https://github.com/cuonggt", "https://x.com/cuonggt"]
+  }
+  </script>
+</head>
+<body>
+  <svg class="sprite" aria-hidden="true" focusable="false">
+    <symbol id="i-out" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="M7 4.5v15l12.5-7.5z"/></symbol>
+    <symbol id="i-pause" viewBox="0 0 24 24"><path d="M8.5 5v14M15.5 5v14"/></symbol>
+  </svg>
+
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="Cuong Giang, home">cuonggt<span class="caret" aria-hidden="true"></span></a>
+    <nav class="nav" aria-label="Primary">
+      <ul>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </nav>
+    <div class="tools">
+      <button class="icon-btn" id="keys-btn" type="button" aria-haspopup="dialog" aria-controls="keys" aria-label="Keyboard shortcuts"><span class="qmark" aria-hidden="true">?</span></button>
+      <button class="icon-btn" id="theme-btn" type="button" aria-label="Switch theme">
+        <svg class="icon i-moon" aria-hidden="true"><use href="#i-moon"/></svg>
+        <svg class="icon i-sun" aria-hidden="true"><use href="#i-sun"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title" data-path="">
+      <div class="hero-main">
+        <p class="eyebrow"><span lang="vi">Hà Nội, Việt Nam</span> · on GitHub since 2014</p>
+        <h1 id="hero-title">Cuong Giang</h1>
+        <p class="tagline"><span class="mono">Software</span> <em>writer.</em></p>
+        <p class="lede">I write tools for developers: keyboard-driven terminal apps in Go, a Go web framework for Inertia.js, and packages for Laravel and Rails. All of it is open source, and nearly all of it installs with one command.</p>
+        <ul class="hero-links">
+          <li><a href="https://github.com/cuonggt" rel="me">github.com/cuonggt<svg class="icon" aria-hidden="true"><use href="#i-out"/></svg></a></li>
+          <li><a href="https://x.com/cuonggt" rel="me">x.com/cuonggt<svg class="icon" aria-hidden="true"><use href="#i-out"/></svg></a></li>
+        </ul>
+        <p class="kbd-hint">This page works like omassh: <kbd>j</kbd> <kbd>k</kbd> to move, <kbd>enter</kbd> to open, <kbd>?</kbd> for every key.</p>
+      </div>
+
+      <nav class="toc" aria-label="Selected work">
+        <p class="toc-title">Selected work</p>
+        <ol>
+          <li><a href="#omassh"><span class="toc-num">01</span><span class="toc-name">omassh</span><span class="toc-desc">SSH client for the terminal</span></a></li>
+          <li><a href="#tug"><span class="toc-num">02</span><span class="toc-name">tug</span><span class="toc-desc">Web framework for Go and Inertia.js</span></a></li>
+          <li><a href="#rove"><span class="toc-num">03</span><span class="toc-name">rove</span><span class="toc-desc">Console for your Linux servers</span></a></li>
+          <li><a href="#omakma"><span class="toc-num">04</span><span class="toc-name">omakma</span><span class="toc-desc">Opinionated macOS setup</span></a></li>
+        </ol>
+      </nav>
+    </section>
+
+    <!-- 01 · Selected work -->
+    <section class="section" id="work" aria-labelledby="work-title" data-path="work">
+      <header class="section-head">
+        <span class="section-num" aria-hidden="true">01</span>
+        <h2 id="work-title">Selected work</h2>
+        <p class="section-note">2024 – 2026</p>
+      </header>
+
+      <article class="project" id="omassh" data-nav="omassh" tabindex="-1" aria-labelledby="omassh-title">
+        <div class="project-head">
+          <div class="project-text">
+            <p class="meta"><span class="idx">01</span><span>go</span><span>ssh client</span><span>2026</span></p>
+            <h3 class="project-name" id="omassh-title"><a href="https://github.com/cuonggt/omassh" data-primary>omassh<span class="visually-hidden"> on GitHub</span><svg class="icon" aria-hidden="true"><use href="#i-out"/></svg></a></h3>
+            <p class="summary">A keyboard-driven SSH client for the terminal: Termius’s data model, lazygit’s interaction model, running on top of real OpenSSH.</p>
+            <p class="body">Keep hosts in groups that share a user, a key and a jump host. Connect with a keystroke, full screen or in a pane beside the list. Browse files, keep tunnels up after you quit, and run a script across a whole group — all through the <code>ssh</code> already on your machine.</p>
+          </div>
+          <div class="project-side">
+            <div class="cmd"><span class="cmd-prompt" aria-hidden="true">$</span><code>brew install <span class="nb">--cask</span> cuonggt/<wbr>tap/<wbr>omassh</code><button class="copy" type="button" data-copy="brew install --cask cuonggt/tap/omassh" aria-label="Copy install command for omassh"><svg class="icon i-copy" aria-hidden="true"><use href="#i-copy"/></svg><svg class="icon i-check" aria-hidden="true"><use href="#i-check"/></svg></button></div>
+            <ul class="links">
+              <li><a href="https://github.com/cuonggt/omassh/releases">Releases<svg class="icon" aria-hidden="true"><use href="#i-out"/></svg></a></li>
+              <li><a href="https://github.com/cuonggt/homebrew-tap">Homebrew tap<svg class="icon" aria-hidden="true"><use href="#i-out"/></svg></a></li>
+            </ul>
+          </div>
+        </div>
+        <figure class="media" data-demo>
+          <div class="frame" style="--media-bg: #14161e; --ratio: 1180 / 620">
+            <video width="1180" height="620" muted loop playsinline preload="none" poster="assets/media/omassh.webp" aria-label="omassh demo: editing a host, connecting in the pane beside the list, and running a snippet across a group">
+              <source src="assets/media/omassh.mp4" type="video/mp4">
+            </video>
+            <button class="demo-toggle" type="button" aria-label="Play demo"><svg class="icon i-play" aria-hidden="true"><use href="#i-play"/></svg><svg class="icon i-pause" aria-hidden="true"><use href="#i-pause"/></svg><span class="demo-label" aria-hidden="true">Play</span></button>
+          </div>
+          <figcaption>Every connection is your own <code>ssh</code>, so <code>~/.ssh/config</code>, ProxyJump and the agent apply exactly as they do on the command line.</figcaption>
+        </figure>
+      </article>
+
+      <article class="project" id="tug" data-nav="tug" tabindex="-1" aria-labelledby="tug-title">
+        <div class="project-head">
+          <div class="project-text">
+            <p class="meta"><span class="idx">02</span><span>go</span><span>web framework</span><span>2026</span><span class="status">early</span></p>
+            <h3 class="project-name" id="tug-title"><a href="https://github.com/cuonggt/tug" data-primary>tug<span class="visually-hidden"> on GitHub</span><svg class="icon" aria-hidden="true"><use href="#i-out"/></svg></a></h3>
+            <p class="summary">A web framework for Go apps whose frontend is Inertia.js: React pages rendered with props straight from Go handlers, no API in between, and the whole app shipped as one binary.</p>
+            <p class="body">Background jobs on a schedule, server-side rendering, uploads on disk or in S3, mail, events broadcast to every open page, and starters in React, Vue or Svelte — one of them with accounts, passkeys and two-factor logins.</p>
+            <p class="quote">The name: a tugboat is small, and moves ships many times its size.</p>
+          </div>
+          <div class="project-side">
+            <div class="cmd"><span class="cmd-prompt" aria-hidden="true">$</span><code>go install github.com/<wbr>cuonggt/<wbr>tug/<wbr>cmd/<wbr>tug@latest</code><button class="copy" type="button" data-copy="go install github.com/cuonggt/tug/cmd/tug@latest" aria-label="Copy install command for tug"><svg class="icon i-copy" aria-hidden="true"><use href="#i-copy"/></svg><svg class="icon i-check" aria-hidden="true"><use href="#i-check"/></svg></button></div>
+            <ul class="links">
+              <li><a href="https://github.com/cuonggt/tug/blob/main/docs/README.md">The guide<svg class="icon" aria-hidden="true"><use href="#i-out"/></svg></a></li>
+              <li><a href="https://github.com/cuonggt/tug/blob/main/docs/roadmap.md">Roadmap<svg class="icon" aria-hidden="true"><use href="#i-out"/></svg></a></li>
+            </ul>
+          </div>
+        </div>
+        <figure class="media">
+          <div class="code-window">
+            <div class="pane">
+              <p class="pane-title">posts.go</p>
+<pre tabindex="0" aria-label="Go code for a tug page and its handler"><code><span class="k">type</span> <span class="t">PostsIndexProps</span> <span class="k">struct</span> {
+    Posts []<span class="t">Post</span>                   <span class="s">`json:"posts"`</span>
+    Stats <span class="n">inertia</span>.<span class="t">DeferProp</span>[<span class="t">Stats</span>] <span class="s">`json:"stats"`</span>
+}
+
+<span class="k">var</span> PostsIndex = <span class="n">tug</span>.<span class="f">Page</span>[<span class="t">PostsIndexProps</span>](<span class="s">"Posts/Index"</span>)
+
+<span class="k">func</span> <span class="f">index</span>(c *<span class="n">tug</span>.<span class="t">Ctx</span>) <span class="t">error</span> {
+    <span class="k">return</span> PostsIndex.<span class="f">Render</span>(c, <span class="t">PostsIndexProps</span>{
+        Posts: store.<span class="f">List</span>(),
+        <span class="c">// fetched after the page shows</span>
+        Stats: <span class="n">inertia</span>.<span class="f">Defer</span>(store.Count),
+    })
+}</code></pre>
+            </div>
+            <div class="pane pane--term">
+              <p class="pane-title">terminal</p>
+<pre tabindex="0" aria-label="Shell commands to start a tug app"><code><span class="c"># a new app, in ./blog</span>
+<span class="pr">$</span> tug new blog
+<span class="pr">$</span> cd blog
+
+<span class="c"># http://localhost:8080, rebuilt</span>
+<span class="c"># and reloaded as it changes</span>
+<span class="pr">$</span> tug dev</code></pre>
+            </div>
+          </div>
+          <figcaption>A page and the handler that renders it. The props go straight to a React page in <code>resources/js/pages/Posts/Index.tsx</code>.</figcaption>
+        </figure>
+      </article>
+
+      <article class="project" id="rove" data-nav="rove" tabindex="-1" aria-labelledby="rove-title">
+        <div class="project-head">
+          <div class="project-text">
+            <p class="meta"><span class="idx">03</span><span>go</span><span>server console</span><span>2026</span></p>
+            <h3 class="project-name" id="rove-title"><a href="https://github.com/cuonggt/rove" data-primary>rove<span class="visually-hidden"> on GitHub</span><svg class="icon" aria-hidden="true"><use href="#i-out"/></svg></a></h3>
+            <p class="summary">A terminal console for the Linux servers you already reach over SSH. If <code>ssh server</code> works, rove works.</p>
+            <p class="body">It reads <code>~/.ssh/config</code> and never asks for a private key. See every server at once, then find what’s wrong — processes and their containers, disks, services, listeners — without remembering the Linux commands for each.</p>
+          </div>
+          <div class="project-side">
+            <div class="cmd"><span class="cmd-prompt" aria-hidden="true">$</span><code>brew install <span class="nb">--cask</span> cuonggt/<wbr>tap/<wbr>rove</code><button class="copy" type="button" data-copy="brew install --cask cuonggt/tap/rove" aria-label="Copy install command for rove"><svg class="icon i-copy" aria-hidden="true"><use href="#i-copy"/></svg><svg class="icon i-check" aria-hidden="true"><use href="#i-check"/></svg></button></div>
+            <ul class="links">
+              <li><a href="https://github.com/cuonggt/rove/releases">Releases<svg class="icon" aria-hidden="true"><use href="#i-out"/></svg></a></li>
+            </ul>
+          </div>
+        </div>
+        <figure class="media" data-demo>
+          <div class="frame" style="--media-bg: #161616; --ratio: 1320 / 420">
+            <video width="1320" height="420" muted loop playsinline preload="none" poster="assets/media/rove.webp" aria-label="rove demo: a fleet of six hosts, then one host's overview, processes, services and disk">
+              <source src="assets/media/rove.mp4" type="video/mp4">
+            </video>
+            <button class="demo-toggle" type="button" aria-label="Play demo"><svg class="icon i-play" aria-hidden="true"><use href="#i-play"/></svg><svg class="icon i-pause" aria-hidden="true"><use href="#i-pause"/></svg><span class="demo-label" aria-hidden="true">Play</span></button>
+          </div>
+          <figcaption>Six hosts, three that need attention. <kbd>enter</kbd> opens one; <kbd>s</kbd> drops into <code>ssh</code> and comes back when you exit.</figcaption>
+        </figure>
+      </article>
+
+      <article class="project" id="omakma" data-nav="omakma" tabindex="-1" aria-labelledby="omakma-title">
+        <div class="project-head">
+          <div class="project-text">
+            <p class="meta"><span class="idx">04</span><span>shell</span><span>macos setup</span><span>2024</span></p>
+            <h3 class="project-name" id="omakma-title"><a href="https://github.com/cuonggt/omakma" data-primary>omakma<span class="visually-hidden"> on GitHub</span><svg class="icon" aria-hidden="true"><use href="#i-out"/></svg></a></h3>
+            <p class="summary">An opinionated setup for macOS, heavily inspired by Omakub. One command turns a fresh Mac into a fully configured, modern web development system.</p>
+            <p class="body">Ghostty, Alacritty and iTerm2; Neovim with LazyVim; tmux and Zellij; lazygit, fzf, ripgrep, bat, eza and zoxide; Node, Go, Python, Ruby, PHP and Rust; MySQL, PostgreSQL and Redis if you want them. Afterwards, <code>omakma</code> opens a menu for themes, fonts and the rest.</p>
+          </div>
+          <div class="project-side">
+            <div class="cmd"><span class="cmd-prompt" aria-hidden="true">$</span><code><span class="nb">bash &lt; &lt;(curl -sL</span> https://<wbr>raw.githubusercontent.com/<wbr>cuonggt/<wbr>omakma/<wbr>master/<wbr>boot.sh)</code><button class="copy" type="button" data-copy="bash &lt; &lt;(curl -sL https://raw.githubusercontent.com/cuonggt/omakma/master/boot.sh)" aria-label="Copy install command for omakma"><svg class="icon i-copy" aria-hidden="true"><use href="#i-copy"/></svg><svg class="icon i-check" aria-hidden="true"><use href="#i-check"/></svg></button></div>
+            <ul class="links">
+              <li><a href="https://github.com/cuonggt/omakma#what-you-get">What you get<svg class="icon" aria-hidden="true"><use href="#i-out"/></svg></a></li>
+            </ul>
+          </div>
+        </div>
+        <figure class="media">
+          <div class="term">
+            <div class="term-bar">
+              <fieldset class="term-tabs">
+                <legend class="visually-hidden">Preview an omakma theme</legend>
+                <label><input type="radio" name="omakma-theme" value="default" checked><span>Default</span></label>
+                <label><input type="radio" name="omakma-theme" value="catppuccin"><span>Catppuccin</span></label>
+                <label><input type="radio" name="omakma-theme" value="nord"><span>Nord</span></label>
+                <label><input type="radio" name="omakma-theme" value="everforest"><span>Everforest</span></label>
+                <label><input type="radio" name="omakma-theme" value="rose-pine"><span>Rose Pine</span></label>
+                <label><input type="radio" name="omakma-theme" value="ristretto"><span>Ristretto</span></label>
+                <label><input type="radio" name="omakma-theme" value="solarized"><span>Solarized</span></label>
+              </fieldset>
+              <span class="term-title" aria-hidden="true"></span>
+            </div>
+            <div class="term-screen" aria-hidden="true">
+<pre class="term-body"><span class="t-path">~/Projects</span> <span class="t-sym">$</span> omakma theme
+<span class="t-path">~/Projects</span> <span class="t-sym">$</span> ls
+<span class="t-dir">bosun</span>   <span class="t-dir">omakma</span>   <span class="t-dir">omassh</span>   <span class="t-dir">rove</span>   <span class="t-dir">tug</span>
+<span class="t-path">~/Projects</span> <span class="t-sym">$</span> <span class="t-cursor"></span></pre>
+              <ol class="term-palette">
+                <li><i></i>black</li><li><i></i>red</li><li><i></i>green</li><li><i></i>yellow</li><li><i></i>blue</li><li><i></i>magenta</li><li><i></i>cyan</li><li><i></i>white</li>
+              </ol>
+            </div>
+          </div>
+          <figcaption>Seven themes, switched together across Alacritty, Ghostty, Zellij, Neovim, VS Code and Sublime Text. The colours are omakma’s own; Default is Tokyo Night.</figcaption>
+        </figure>
+      </article>
+    </section>
+
+    <!-- 02 · More projects -->
+    <section class="section" id="more" aria-labelledby="more-title" data-path="more">
+      <header class="section-head">
+        <span class="section-num" aria-hidden="true">02</span>
+        <h2 id="more-title">More projects</h2>
+        <p class="section-note">Laravel, Rails, Go</p>
+      </header>
+
+      <div class="cards">
+        <article class="card card--wide" data-nav="laravel-dibi" tabindex="-1" aria-labelledby="dibi-title">
+          <div class="card-text">
+            <h3 id="dibi-title"><a href="https://github.com/cuonggt/laravel-dibi" data-primary>laravel-dibi</a></h3>
+            <p>An elegant GUI database management tool for your Laravel applications. Browse the database on a local or dev server at <code>/dibi</code>, without installing another app.</p>
+            <div class="cmd"><span class="cmd-prompt" aria-hidden="true">$</span><code>composer require cuonggt/<wbr><span class="nb">laravel-dibi</span></code><button class="copy" type="button" data-copy="composer require cuonggt/laravel-dibi" aria-label="Copy install command for laravel-dibi"><svg class="icon i-copy" aria-hidden="true"><use href="#i-copy"/></svg><svg class="icon i-check" aria-hidden="true"><use href="#i-check"/></svg></button></div>
+            <p class="meta"><span>php</span><span>vue</span><span>2018</span></p>
+          </div>
+          <div class="card-shot">
+            <img src="assets/media/dibi.webp" width="1600" height="816" loading="lazy" decoding="async" alt="Dibi showing the rows of a users table, with a raw SQL filter above the grid and the list of tables on the left.">
+          </div>
+        </article>
+
+        <article class="card" data-nav="bosun" tabindex="-1" aria-labelledby="bosun-title">
+          <h3 id="bosun-title"><a href="https://github.com/cuonggt/bosun" data-primary>bosun</a></h3>
+          <p>Provision servers and deploy Laravel applications with zero downtime, straight from <code>artisan</code>.</p>
+          <ul class="chips" aria-label="Artisan commands">
+            <li>setup</li><li>deploy</li><li>rollback</li><li>secure</li><li>status</li><li>logs</li><li>ssh</li>
+          </ul>
+          <div class="cmd"><span class="cmd-prompt" aria-hidden="true">$</span><code>composer require cuonggt/<wbr>bosun</code><button class="copy" type="button" data-copy="composer require cuonggt/bosun" aria-label="Copy install command for bosun"><svg class="icon i-copy" aria-hidden="true"><use href="#i-copy"/></svg><svg class="icon i-check" aria-hidden="true"><use href="#i-check"/></svg></button></div>
+          <p class="meta"><span>php</span><span>laravel</span><span>2026</span></p>
+        </article>
+
+        <article class="card" data-nav="envoy-cli" tabindex="-1" aria-labelledby="envoy-title">
+          <h3 id="envoy-title"><a href="https://github.com/cuonggt/envoy-cli" data-primary>envoy-cli</a></h3>
+          <p>Run the tasks you run on your remote servers, deploys and the rest, from a YAML <code>Envoyfile</code> and a single binary.</p>
+          <p class="meta"><span>go</span><span>cli</span><span>2023</span></p>
+        </article>
+
+        <article class="card" data-nav="zzh" tabindex="-1" aria-labelledby="zzh-title">
+          <h3 id="zzh-title"><a href="https://github.com/cuonggt/zzh" data-primary>zzh</a></h3>
+          <p>An SSH client and connection manager for your favourite terminal. It stores your hosts and credentials, so you don’t have to remember them.</p>
+          <p class="meta"><span>go</span><span>cli</span><span>2019</span></p>
+        </article>
+
+        <article class="card" data-nav="hooky" tabindex="-1" aria-labelledby="hooky-title">
+          <h3 id="hooky-title"><a href="https://github.com/cuonggt/hooky" data-primary>hooky</a></h3>
+          <p>Git hooks for PHP, heavily inspired by husky: lint commit messages, lint code and run tests when you commit or push.</p>
+          <div class="cmd"><span class="cmd-prompt" aria-hidden="true">$</span><code>composer require <span class="nb">--dev</span> cuonggt/<wbr>hooky</code><button class="copy" type="button" data-copy="composer require --dev cuonggt/hooky" aria-label="Copy install command for hooky"><svg class="icon i-copy" aria-hidden="true"><use href="#i-copy"/></svg><svg class="icon i-check" aria-hidden="true"><use href="#i-check"/></svg></button></div>
+          <p class="meta"><span>php</span><span>composer</span><span>2023</span></p>
+        </article>
+
+        <article class="card" data-nav="reji-stripe" tabindex="-1" aria-labelledby="reji-title">
+          <h3 id="reji-title"><a href="https://github.com/cuonggt/reji-stripe" data-primary>reji-stripe</a></h3>
+          <p>An expressive, fluent interface to Stripe’s subscription billing services for your Rails applications.</p>
+          <p class="meta"><span>ruby</span><span>gem</span><span>2020</span></p>
+        </article>
+
+        <article class="card" data-nav="laravel-sendgrid-notification-channel" tabindex="-1" aria-labelledby="sendgrid-title">
+          <h3 id="sendgrid-title"><a href="https://github.com/cuonggt/laravel-sendgrid-notification-channel" data-primary>laravel-sendgrid-notification-channel</a></h3>
+          <p>Send Laravel notifications as mail formatted by SendGrid’s own templates.</p>
+          <p class="meta"><span>php</span><span>laravel</span><span>2019</span></p>
+        </article>
+
+        <article class="card" data-nav="binance-connector-php" tabindex="-1" aria-labelledby="binance-title">
+          <h3 id="binance-title"><a href="https://github.com/cuonggt/binance-connector-php" data-primary>binance-connector-php</a></h3>
+          <p>A simple connector to the Binance public API: market data, trading and websockets, from PHP.</p>
+          <p class="meta"><span>php</span><span>library</span><span>2022</span></p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 03 · Earlier -->
+    <section class="section" id="earlier" aria-labelledby="earlier-title" data-path="earlier">
+      <header class="section-head">
+        <span class="section-num" aria-hidden="true">03</span>
+        <h2 id="earlier-title">Earlier</h2>
+        <p class="section-note">2016 – 2019</p>
+      </header>
+
+      <ul class="archive">
+        <li data-nav="aws-lambda-slack-notification-go" tabindex="-1"><span class="year">2019</span><a href="https://github.com/cuonggt/aws-lambda-slack-notification-go" data-primary>aws-lambda-slack-notification-go</a><span class="desc">A Go function on AWS Lambda that posts notifications to Slack, set up with two scripts.</span><span class="lang">go</span></li>
+        <li data-nav="vl-paginator" tabindex="-1"><span class="year">2018</span><a href="https://github.com/cuonggt/vl-paginator" data-primary>vl-paginator</a><span class="desc">A Vue.js paginator component.</span><span class="lang">vue</span></li>
+        <li data-nav="convert-mysql-to-utf8mb4" tabindex="-1"><span class="year">2017</span><a href="https://github.com/cuonggt/convert-mysql-to-utf8mb4" data-primary>convert-mysql-to-utf8mb4</a><span class="desc">Converts a MySQL database’s character set to utf8mb4 in one run.</span><span class="lang">php</span></li>
+        <li data-nav="rubick" tabindex="-1"><span class="year">2017</span><a href="https://github.com/cuonggt/rubick" data-primary>rubick</a><span class="desc">A Vagrant box for Rails development, in the spirit of Laravel Homestead.</span><span class="lang">ruby</span></li>
+        <li data-nav="aghanim" tabindex="-1"><span class="year">2017</span><a href="https://github.com/cuonggt/aghanim" data-primary>aghanim</a><span class="desc">The scripts that build the Rubick box.</span><span class="lang">shell</span></li>
+        <li data-nav="purezenta" tabindex="-1"><span class="year">2016</span><a href="https://github.com/cuonggt/purezenta" data-primary>purezenta</a><span class="desc">Simple view presenters for your Rails application.</span><span class="lang">ruby</span></li>
+      </ul>
+    </section>
+
+    <!-- 04 · About -->
+    <section class="section" id="about" aria-labelledby="about-title" data-path="about">
+      <header class="section-head">
+        <span class="section-num" aria-hidden="true">04</span>
+        <h2 id="about-title">About</h2>
+      </header>
+
+      <div class="about">
+        <div class="prose">
+          <p>I’m Cuong Giang, a software developer in <span lang="vi">Hà Nội</span>. I’ve kept my work on GitHub since 2014 and have published open source since 2016: Ruby gems for Rails at first, then Laravel packages, and lately mostly Go.</p>
+          <p>A lot of what I build carries a good idea somewhere new. Stripe billing in the style of Laravel Cashier, for Rails. Laravel’s Envoy, as one Go binary. husky’s git hooks, for PHP. Omakub’s opinions, for the Mac. Inertia.js, for Go.</p>
+          <p>The rest lives between a laptop and a server: SSH clients, deploy tools, and a console for a fleet of Linux machines.</p>
+        </div>
+        <dl class="facts">
+          <div><dt>Based in</dt><dd lang="vi">Hà Nội, Việt Nam</dd></div>
+          <div><dt>On GitHub</dt><dd>since 2014</dd></div>
+          <div><dt>Open source</dt><dd>since 2016</dd></div>
+          <div><dt>Writes</dt><dd>Go, PHP, Ruby, JavaScript, Shell</dd></div>
+          <div><dt>Setup</dt><dd><a href="https://github.com/cuonggt/omakma">omakma</a></dd></div>
+          <div><dt>Elsewhere</dt><dd><a href="https://github.com/cuonggt" rel="me">GitHub</a> · <a href="https://x.com/cuonggt" rel="me">X</a> · <a href="https://gist.github.com/cuonggt">Gists</a></dd></div>
+        </dl>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>© 2026 Cuong Giang</p>
+      <p>Set in Newsreader and JetBrains Mono. Plain HTML and CSS, no build step.</p>
+      <p class="footer-top"><a href="#main">Back to top</a></p>
+    </div>
+  </footer>
+
+  <div class="statusbar" id="statusbar" aria-hidden="true">
+    <span class="sb-mode" id="sb-mode">normal</span>
+    <span class="sb-path" id="sb-path">~/</span>
+    <span class="sb-hints"><kbd>j</kbd><kbd>k</kbd> move <kbd>enter</kbd> open <kbd>y</kbd> copy <kbd>t</kbd> theme</span>
+    <button class="sb-help" type="button" tabindex="-1" data-open-keys><kbd>?</kbd> keys</button>
+    <span class="sb-pos" id="sb-pos"></span>
+  </div>
+
+  <dialog class="keys" id="keys" aria-labelledby="keys-title">
+    <h2 id="keys-title">Keyboard</h2>
+    <dl class="keys-list">
+      <div><dt><kbd>j</kbd> <kbd>k</kbd></dt><dd>Next and previous project</dd></div>
+      <div><dt><kbd>enter</kbd> <kbd>o</kbd></dt><dd>Open the selected project</dd></div>
+      <div><dt><kbd>y</kbd></dt><dd>Copy its install command</dd></div>
+      <div><dt><kbd>g</kbd> <kbd>G</kbd></dt><dd>Top and bottom of the page</dd></div>
+      <div><dt><kbd>t</kbd></dt><dd>Light or dark theme</dd></div>
+      <div><dt><kbd>?</kbd></dt><dd>This list</dd></div>
+      <div><dt><kbd>esc</kbd></dt><dd>Close, or clear the selection</dd></div>
+    </dl>
+    <label class="switch">
+      <input type="checkbox" role="switch" id="shortcuts-toggle" checked>
+      <span>Single-key shortcuts</span>
+    </label>
+    <p class="keys-note">Turn them off if they get in the way of a screen reader or voice control. The buttons in the header always work.</p>
+    <form method="dialog"><button class="btn" type="submit">Close</button></form>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
