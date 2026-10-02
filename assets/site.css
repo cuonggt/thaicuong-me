@@ -789,13 +789,16 @@ kbd {
 .cards { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1rem; }
 @media (min-width: 640px) {
   .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .card--wide { grid-column: span 2; }
+  .card--wide { grid-column: 1 / -1; }
 }
+/* The wide card has the first row to itself; a short last row is filled by its last card. */
 @media (min-width: 640px) and (max-width: 1023px) {
-  .cards > :last-child { grid-column: span 2; }
+  .cards > :last-child:nth-child(even) { grid-column: span 2; }
 }
 @media (min-width: 1024px) {
   .cards { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; }
+  .cards > :last-child:nth-child(3n) { grid-column: span 2; }
+  .cards > :last-child:nth-child(3n + 2) { grid-column: 1 / -1; }
 }
 
 .card {

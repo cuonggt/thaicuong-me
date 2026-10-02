@@ -125,6 +125,7 @@
           <div class="project-side">
             <div class="cmd"><span class="cmd-prompt" aria-hidden="true">$</span><code>brew install <span class="nb">--cask</span> cuonggt/<wbr>tap/<wbr>omassh</code><button class="copy" type="button" data-copy="brew install --cask cuonggt/tap/omassh" aria-label="Copy install command for omassh"><svg class="icon i-copy" aria-hidden="true"><use href="#i-copy"/></svg><svg class="icon i-check" aria-hidden="true"><use href="#i-check"/></svg></button></div>
             <ul class="links">
+              <li><a href="https://cuonggt.github.io/omassh/">Docs<svg class="icon" aria-hidden="true"><use href="#i-out"/></svg></a></li>
               <li><a href="https://github.com/cuonggt/omassh/releases">Releases<svg class="icon" aria-hidden="true"><use href="#i-out"/></svg></a></li>
               <li><a href="https://github.com/cuonggt/homebrew-tap">Homebrew tap<svg class="icon" aria-hidden="true"><use href="#i-out"/></svg></a></li>
             </ul>
@@ -146,8 +147,8 @@
           <div class="project-text">
             <p class="meta"><span class="idx">02</span><span>go</span><span>web framework</span><span>2026</span><span class="status">early</span></p>
             <h3 class="project-name" id="tug-title"><a href="https://github.com/cuonggt/tug" data-primary>tug<span class="visually-hidden"> on GitHub</span><svg class="icon" aria-hidden="true"><use href="#i-out"/></svg></a></h3>
-            <p class="summary">A web framework for Go apps whose frontend is Inertia.js: React pages rendered with props straight from Go handlers, no API in between, and the whole app shipped as one binary.</p>
-            <p class="body">Background jobs on a schedule, server-side rendering, uploads on disk or in S3, mail, events broadcast to every open page, and starters in React, Vue or Svelte — one of them with accounts, passkeys and two-factor logins.</p>
+            <p class="summary">A web framework for Go apps whose frontend is Inertia.js: React, Vue or Svelte pages rendered with props straight from Go handlers, no API in between, and the whole app shipped as one binary.</p>
+            <p class="body">Background jobs on a schedule, server-side rendering, migrations in plain SQL, uploads on disk or in S3, mail, and events broadcast to every open page. <code>tug gen</code> types the frontend against the Go — props, routes and forms — and <code>tug new -auth</code> starts an app with accounts, passkeys, API tokens and two-factor logins.</p>
             <p class="quote">The name: a tugboat is small, and moves ships many times its size.</p>
           </div>
           <div class="project-side">
@@ -300,12 +301,6 @@
           <p class="meta"><span>go</span><span>cli</span><span>2023</span></p>
         </article>
 
-        <article class="card" data-nav="zzh" tabindex="-1" aria-labelledby="zzh-title">
-          <h3 id="zzh-title"><a href="https://github.com/cuonggt/zzh" data-primary>zzh</a></h3>
-          <p>An SSH client and connection manager for your favourite terminal. It stores your hosts and credentials, so you don’t have to remember them.</p>
-          <p class="meta"><span>go</span><span>cli</span><span>2019</span></p>
-        </article>
-
         <article class="card" data-nav="hooky" tabindex="-1" aria-labelledby="hooky-title">
           <h3 id="hooky-title"><a href="https://github.com/cuonggt/hooky" data-primary>hooky</a></h3>
           <p>Git hooks for PHP, heavily inspired by husky: lint commit messages, lint code and run tests when you commit or push.</p>
@@ -345,8 +340,7 @@
         <li data-nav="aws-lambda-slack-notification-go" tabindex="-1"><span class="year">2019</span><a href="https://github.com/cuonggt/aws-lambda-slack-notification-go" data-primary>aws-lambda-slack-notification-go</a><span class="desc">A Go function on AWS Lambda that posts notifications to Slack, set up with two scripts.</span><span class="lang">go</span></li>
         <li data-nav="vl-paginator" tabindex="-1"><span class="year">2018</span><a href="https://github.com/cuonggt/vl-paginator" data-primary>vl-paginator</a><span class="desc">A Vue.js paginator component.</span><span class="lang">vue</span></li>
         <li data-nav="convert-mysql-to-utf8mb4" tabindex="-1"><span class="year">2017</span><a href="https://github.com/cuonggt/convert-mysql-to-utf8mb4" data-primary>convert-mysql-to-utf8mb4</a><span class="desc">Converts a MySQL database’s character set to utf8mb4 in one run.</span><span class="lang">php</span></li>
-        <li data-nav="rubick" tabindex="-1"><span class="year">2017</span><a href="https://github.com/cuonggt/rubick" data-primary>rubick</a><span class="desc">A Vagrant box for Rails development, in the spirit of Laravel Homestead.</span><span class="lang">ruby</span></li>
-        <li data-nav="aghanim" tabindex="-1"><span class="year">2017</span><a href="https://github.com/cuonggt/aghanim" data-primary>aghanim</a><span class="desc">The scripts that build the Rubick box.</span><span class="lang">shell</span></li>
+        <li data-nav="aghanim" tabindex="-1"><span class="year">2017</span><a href="https://github.com/cuonggt/aghanim" data-primary>aghanim</a><span class="desc">The scripts that build Rubick, a Vagrant box for Rails development in the spirit of Laravel Homestead.</span><span class="lang">shell</span></li>
         <li data-nav="purezenta" tabindex="-1"><span class="year">2016</span><a href="https://github.com/cuonggt/purezenta" data-primary>purezenta</a><span class="desc">Simple view presenters for your Rails application.</span><span class="lang">ruby</span></li>
       </ul>
     </section>
@@ -362,7 +356,7 @@
         <div class="prose">
           <p>I’m Cuong Giang, a software developer in <span lang="vi">Hà Nội</span>. I’ve kept my work on GitHub since 2014 and have published open source since 2016: Ruby gems for Rails at first, then Laravel packages, and lately mostly Go.</p>
           <p>A lot of what I build carries a good idea somewhere new. Stripe billing in the style of Laravel Cashier, for Rails. Laravel’s Envoy, as one Go binary. husky’s git hooks, for PHP. Omakub’s opinions, for the Mac. Inertia.js, for Go.</p>
-          <p>The rest lives between a laptop and a server: SSH clients, deploy tools, and a console for a fleet of Linux machines.</p>
+          <p>The rest lives between a laptop and a server: an SSH client, deploy tools, and a console for a fleet of Linux machines.</p>
         </div>
         <dl class="facts">
           <div><dt>Based in</dt><dd lang="vi">Hà Nội, Việt Nam</dd></div>
