@@ -117,10 +117,11 @@
       <article class="project" id="omassh" data-nav="omassh" tabindex="-1" aria-labelledby="omassh-title">
         <div class="project-head">
           <div class="project-text">
-            <p class="meta"><span class="idx">01</span><span>go</span><span>ssh client</span><span>2026</span></p>
+            <p class="meta"><span class="idx">01</span><span>go</span><span>ssh client</span><span>2019 – 2026</span></p>
             <h3 class="project-name" id="omassh-title"><a href="https://github.com/cuonggt/omassh" data-primary>omassh<span class="visually-hidden"> on GitHub</span><svg class="icon" aria-hidden="true"><use href="#i-out"/></svg></a></h3>
             <p class="summary">A keyboard-driven SSH client for the terminal: Termius’s data model, lazygit’s interaction model, running on top of real OpenSSH.</p>
             <p class="body">Keep hosts in groups that share a user, a key and a jump host. Connect with a keystroke, full screen or in a pane beside the list. Browse files, keep tunnels up after you quit, and run a script across a whole group — all through the <code>ssh</code> already on your machine.</p>
+            <p class="quote">It began in 2019 as zzh, a connection manager, and took its present shape under a new name.</p>
           </div>
           <div class="project-side">
             <div class="cmd"><span class="cmd-prompt" aria-hidden="true">$</span><code>brew install <span class="nb">--cask</span> cuonggt/<wbr>tap/<wbr>omassh</code><button class="copy" type="button" data-copy="brew install --cask cuonggt/tap/omassh" aria-label="Copy install command for omassh"><svg class="icon i-copy" aria-hidden="true"><use href="#i-copy"/></svg><svg class="icon i-check" aria-hidden="true"><use href="#i-check"/></svg></button></div>
@@ -252,7 +253,7 @@
             <div class="term-screen" aria-hidden="true">
 <pre class="term-body"><span class="t-path">~/Projects</span> <span class="t-sym">$</span> omakma theme
 <span class="t-path">~/Projects</span> <span class="t-sym">$</span> ls
-<span class="t-dir">bosun</span>   <span class="t-dir">omakma</span>   <span class="t-dir">omassh</span>   <span class="t-dir">rove</span>   <span class="t-dir">tug</span>
+<span class="t-dir">bosun</span>   <span class="t-dir">omakma</span>   <span class="t-dir">omassh</span>   <span class="t-dir">rove</span>   <span class="t-dir">shellhand</span>   <span class="t-dir">tug</span>
 <span class="t-path">~/Projects</span> <span class="t-sym">$</span> <span class="t-cursor"></span></pre>
               <ol class="term-palette">
                 <li><i></i>black</li><li><i></i>red</li><li><i></i>green</li><li><i></i>yellow</li><li><i></i>blue</li><li><i></i>magenta</li><li><i></i>cyan</li><li><i></i>white</li>
@@ -269,10 +270,25 @@
       <header class="section-head">
         <span class="section-num" aria-hidden="true">02</span>
         <h2 id="more-title">More projects</h2>
-        <p class="section-note">Laravel, Rails, Go</p>
+        <p class="section-note">Rails, Laravel, Go, Swift</p>
       </header>
 
       <div class="cards">
+        <article class="card card--wide" data-nav="kaze" tabindex="-1" aria-labelledby="kaze-title">
+          <div class="card-text">
+            <h3 id="kaze-title"><a href="https://github.com/cuonggt/kaze" data-primary>kaze</a></h3>
+            <p>Authentication scaffolding for a new Rails application, in the spirit of Laravel Breeze. Login, registration, password reset, email verification and a settings area, generated into the app as code you own and then edit.</p>
+            <ul class="chips" aria-label="Stacks">
+              <li>hotwire</li><li>react</li><li>vue</li>
+            </ul>
+            <div class="cmd"><span class="cmd-prompt" aria-hidden="true">$</span><code>gem install kaze</code><button class="copy" type="button" data-copy="gem install kaze" aria-label="Copy install command for kaze"><svg class="icon i-copy" aria-hidden="true"><use href="#i-copy"/></svg><svg class="icon i-check" aria-hidden="true"><use href="#i-check"/></svg></button></div>
+            <p class="meta"><span>ruby</span><span>rails</span><span>2024</span></p>
+          </div>
+          <div class="card-shot">
+            <img src="assets/media/kaze.webp" width="800" height="500" loading="lazy" decoding="async" alt="A Kaze settings page: Profile, Password and Appearance tabs beside a form for name and email, with the application’s sidebar on the left.">
+          </div>
+        </article>
+
         <article class="card card--wide" data-nav="laravel-dibi" tabindex="-1" aria-labelledby="dibi-title">
           <div class="card-text">
             <h3 id="dibi-title"><a href="https://github.com/cuonggt/laravel-dibi" data-primary>laravel-dibi</a></h3>
@@ -283,6 +299,13 @@
           <div class="card-shot">
             <img src="assets/media/dibi.webp" width="1600" height="816" loading="lazy" decoding="async" alt="Dibi showing the rows of a users table, with a raw SQL filter above the grid and the list of tables on the left.">
           </div>
+        </article>
+
+        <article class="card" data-nav="shellhand" tabindex="-1" aria-labelledby="shellhand-title">
+          <h3 id="shellhand-title"><a href="https://github.com/cuonggt/shellhand" data-primary>shellhand</a></h3>
+          <p>A native macOS SSH client: a host list that inherits down its groups, tabs running the system’s own <code>ssh</code>, and files over SFTP — in a window rather than a terminal. Swift all the way down, and it wants macOS 26.</p>
+          <div class="cmd"><span class="cmd-prompt" aria-hidden="true">$</span><code>brew install <span class="nb">--cask</span> cuonggt/<wbr>tap/<wbr>shellhand</code><button class="copy" type="button" data-copy="brew install --cask cuonggt/tap/shellhand" aria-label="Copy install command for shellhand"><svg class="icon i-copy" aria-hidden="true"><use href="#i-copy"/></svg><svg class="icon i-check" aria-hidden="true"><use href="#i-check"/></svg></button></div>
+          <p class="meta"><span>swift</span><span>macos app</span><span>2026</span><span class="status">early</span></p>
         </article>
 
         <article class="card" data-nav="bosun" tabindex="-1" aria-labelledby="bosun-title">
@@ -353,15 +376,15 @@
 
       <div class="about">
         <div class="prose">
-          <p>I’m Cuong Giang, a software developer in <span lang="vi">Hà Nội</span>. I’ve kept my work on GitHub since 2014 and have published open source since 2016: Ruby gems for Rails at first, then Laravel packages, and lately mostly Go.</p>
-          <p>A lot of what I build carries a good idea somewhere new. Stripe billing in the style of Laravel Cashier, for Rails. Laravel’s Envoy, as one Go binary. husky’s git hooks, for PHP. Omakub’s opinions, for the Mac. Inertia.js, for Go.</p>
-          <p>The rest lives between a laptop and a server: an SSH client, deploy tools, and a console for a fleet of Linux machines.</p>
+          <p>I’m Cuong Giang, a software developer in <span lang="vi">Hà Nội</span>. I’ve kept my work on GitHub since 2014 and have published open source since 2016: Ruby gems for Rails at first, then Laravel packages, then Go, and lately some Swift.</p>
+          <p>A lot of what I build carries a good idea somewhere new. Laravel Cashier’s billing and Laravel Breeze’s starter kits, for Rails. Laravel’s Envoy, as one Go binary. husky’s git hooks, for PHP. Omakub’s opinions, for the Mac. Inertia.js, for Go.</p>
+          <p>The rest lives between a laptop and a server: SSH clients, deploy tools, and a console for a fleet of Linux machines.</p>
         </div>
         <dl class="facts">
           <div><dt>Based in</dt><dd lang="vi">Hà Nội, Việt Nam</dd></div>
           <div><dt>On GitHub</dt><dd>since 2014</dd></div>
           <div><dt>Open source</dt><dd>since 2016</dd></div>
-          <div><dt>Writes</dt><dd>Go, PHP, Ruby, JavaScript, Shell</dd></div>
+          <div><dt>Writes</dt><dd>Go, Swift, PHP, Ruby, JavaScript, Shell</dd></div>
           <div><dt>Setup</dt><dd><a href="https://github.com/cuonggt/omakma">omakma</a></dd></div>
           <div><dt>Elsewhere</dt><dd><a href="https://github.com/cuonggt" rel="me">GitHub</a> · <a href="https://x.com/cuonggt" rel="me">X</a> · <a href="https://gist.github.com/cuonggt">Gists</a></dd></div>
         </dl>

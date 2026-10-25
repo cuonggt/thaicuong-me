@@ -19,7 +19,7 @@ Then open http://localhost:4173. Any static file server works.
 | `404.html` | The not-found page, for hosts that serve one |
 | `assets/site.css` | All the styles. Colours are tokens at the top, light and dark |
 | `assets/site.js` | The theme toggle, copy buttons, demo playback and keyboard shortcuts |
-| `assets/media/` | Demo videos, their posters, and the Dibi screenshot |
+| `assets/media/` | Demo videos, their posters, and the Dibi and Kaze screenshots |
 | `assets/og.png` | The picture shown when the site is shared |
 
 The page works without JavaScript. The script only adds things on top of it.
