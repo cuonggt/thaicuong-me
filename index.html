@@ -100,8 +100,9 @@
         <ol>
           <li><a href="#omassh"><span class="toc-num">01</span><span class="toc-name">omassh</span><span class="toc-desc">SSH client for the terminal</span></a></li>
           <li><a href="#tug"><span class="toc-num">02</span><span class="toc-name">tug</span><span class="toc-desc">Web framework for Go and Inertia.js</span></a></li>
-          <li><a href="#rove"><span class="toc-num">03</span><span class="toc-name">rove</span><span class="toc-desc">Console for your Linux servers</span></a></li>
-          <li><a href="#omakma"><span class="toc-num">04</span><span class="toc-name">omakma</span><span class="toc-desc">Opinionated macOS setup</span></a></li>
+          <li><a href="#kaze"><span class="toc-num">03</span><span class="toc-name">kaze</span><span class="toc-desc">Rails authentication scaffolding</span></a></li>
+          <li><a href="#shellhand"><span class="toc-num">04</span><span class="toc-name">shellhand</span><span class="toc-desc">Native macOS SSH client</span></a></li>
+          <li><a href="#omakma"><span class="toc-num">05</span><span class="toc-name">omakma</span><span class="toc-desc">Opinionated macOS setup</span></a></li>
         </ol>
       </nav>
     </section>
@@ -111,7 +112,7 @@
       <header class="section-head">
         <span class="section-num" aria-hidden="true">01</span>
         <h2 id="work-title">Selected work</h2>
-        <p class="section-note">2024 – 2026</p>
+        <p class="section-note">2019 – 2026</p>
       </header>
 
       <article class="project" id="omassh" data-nav="omassh" tabindex="-1" aria-labelledby="omassh-title">
@@ -194,36 +195,53 @@
         </figure>
       </article>
 
-      <article class="project" id="rove" data-nav="rove" tabindex="-1" aria-labelledby="rove-title">
+      <article class="project" id="kaze" data-nav="kaze" tabindex="-1" aria-labelledby="kaze-title">
         <div class="project-head">
           <div class="project-text">
-            <p class="meta"><span class="idx">03</span><span>go</span><span>server console</span><span>2026</span></p>
-            <h3 class="project-name" id="rove-title"><a href="https://github.com/cuonggt/rove" data-primary>rove<span class="visually-hidden"> on GitHub</span><svg class="icon" aria-hidden="true"><use href="#i-out"/></svg></a></h3>
-            <p class="summary">A terminal console for the Linux servers you already reach over SSH. If <code>ssh server</code> works, rove works.</p>
-            <p class="body">It reads <code>~/.ssh/config</code> and never asks for a private key. See every server at once, then find what’s wrong — processes and their containers, disks, services, listeners — without remembering the Linux commands for each.</p>
+            <p class="meta"><span class="idx">03</span><span>ruby</span><span>rails scaffolding</span><span>2024</span></p>
+            <h3 class="project-name" id="kaze-title"><a href="https://github.com/cuonggt/kaze" data-primary>kaze<span class="visually-hidden"> on GitHub</span><svg class="icon" aria-hidden="true"><use href="#i-out"/></svg></a></h3>
+            <p class="summary">Authentication scaffolding for a new Rails application, in the spirit of Laravel Breeze: the routes, controllers and views for signing people in, generated into the app as code you own.</p>
+            <p class="body">Login, registration, password reset and email verification, and a settings area where someone can change their name, their password and the appearance, or close the account. Three stacks built to one design — Hotwire with ERB, or React or Vue over Inertia — so the choice is about the frontend, not about which features you get.</p>
           </div>
           <div class="project-side">
-            <div class="cmd"><span class="cmd-prompt" aria-hidden="true">$</span><code>brew install <span class="nb">--cask</span> cuonggt/<wbr>tap/<wbr>rove</code><button class="copy" type="button" data-copy="brew install --cask cuonggt/tap/rove" aria-label="Copy install command for rove"><svg class="icon i-copy" aria-hidden="true"><use href="#i-copy"/></svg><svg class="icon i-check" aria-hidden="true"><use href="#i-check"/></svg></button></div>
+            <div class="cmd"><span class="cmd-prompt" aria-hidden="true">$</span><code>gem install kaze</code><button class="copy" type="button" data-copy="gem install kaze" aria-label="Copy install command for kaze"><svg class="icon i-copy" aria-hidden="true"><use href="#i-copy"/></svg><svg class="icon i-check" aria-hidden="true"><use href="#i-check"/></svg></button></div>
             <ul class="links">
-              <li><a href="https://github.com/cuonggt/rove/releases">Releases<svg class="icon" aria-hidden="true"><use href="#i-out"/></svg></a></li>
+              <li><a href="https://rubygems.org/gems/kaze">RubyGems<svg class="icon" aria-hidden="true"><use href="#i-out"/></svg></a></li>
+              <li><a href="https://github.com/cuonggt/kaze/releases">Releases<svg class="icon" aria-hidden="true"><use href="#i-out"/></svg></a></li>
             </ul>
           </div>
         </div>
-        <figure class="media" data-demo>
-          <div class="frame" style="--media-bg: #161616; --ratio: 1320 / 420">
-            <video width="1320" height="420" muted loop playsinline preload="none" poster="assets/media/rove.webp" aria-label="rove demo: a fleet of six hosts, then one host's overview, processes, services and disk">
-              <source src="assets/media/rove.mp4" type="video/mp4">
-            </video>
-            <button class="demo-toggle" type="button" aria-label="Play demo"><svg class="icon i-play" aria-hidden="true"><use href="#i-play"/></svg><svg class="icon i-pause" aria-hidden="true"><use href="#i-pause"/></svg><span class="demo-label" aria-hidden="true">Play</span></button>
+        <figure class="media">
+          <div class="frame" style="--media-bg: #f1f2f4; --ratio: 1600 / 500">
+            <img src="assets/media/kaze.webp" width="1600" height="500" loading="lazy" decoding="async" alt="Two Kaze screens side by side: a login form with email and password in light mode, and the profile settings page in dark mode.">
           </div>
-          <figcaption>Six hosts, three that need attention. <kbd>enter</kbd> opens one; <kbd>s</kbd> drops into <code>ssh</code> and comes back when you exit.</figcaption>
+          <figcaption>Signing in on the left, the settings area on the right. The Hotwire, React and Vue stacks are all built to this one design.</figcaption>
         </figure>
+      </article>
+
+      <article class="project" id="shellhand" data-nav="shellhand" tabindex="-1" aria-labelledby="shellhand-title">
+        <div class="project-head">
+          <div class="project-text">
+            <p class="meta"><span class="idx">04</span><span>swift</span><span>macos app</span><span>2026</span><span class="status">early</span></p>
+            <h3 class="project-name" id="shellhand-title"><a href="https://github.com/cuonggt/shellhand" data-primary>shellhand<span class="visually-hidden"> on GitHub</span><svg class="icon" aria-hidden="true"><use href="#i-out"/></svg></a></h3>
+            <p class="summary">A native macOS SSH client: the host list, tabs on real <code>ssh</code>, and files over SFTP, in a window rather than a terminal.</p>
+            <p class="body">A host takes its own value first, then the nearest group above it that sets one, so production need not look like staging. Every session is <code>/usr/bin/ssh</code> on a pty, so your config, your jump hosts and your agent behave as they do on the command line. Files open in a window of their own, this Mac on the left and the host on the right.</p>
+            <p class="quote">omassh’s idea, in a window. Swift all the way down, and it wants macOS 26.</p>
+          </div>
+          <div class="project-side">
+            <div class="cmd"><span class="cmd-prompt" aria-hidden="true">$</span><code>brew install <span class="nb">--cask</span> cuonggt/<wbr>tap/<wbr>shellhand</code><button class="copy" type="button" data-copy="brew install --cask cuonggt/tap/shellhand" aria-label="Copy install command for shellhand"><svg class="icon i-copy" aria-hidden="true"><use href="#i-copy"/></svg><svg class="icon i-check" aria-hidden="true"><use href="#i-check"/></svg></button></div>
+            <ul class="links">
+              <li><a href="https://github.com/cuonggt/shellhand/releases">Releases<svg class="icon" aria-hidden="true"><use href="#i-out"/></svg></a></li>
+              <li><a href="https://github.com/cuonggt/homebrew-tap">Homebrew tap<svg class="icon" aria-hidden="true"><use href="#i-out"/></svg></a></li>
+            </ul>
+          </div>
+        </div>
       </article>
 
       <article class="project" id="omakma" data-nav="omakma" tabindex="-1" aria-labelledby="omakma-title">
         <div class="project-head">
           <div class="project-text">
-            <p class="meta"><span class="idx">04</span><span>shell</span><span>macos setup</span><span>2024</span></p>
+            <p class="meta"><span class="idx">05</span><span>shell</span><span>macos setup</span><span>2024</span></p>
             <h3 class="project-name" id="omakma-title"><a href="https://github.com/cuonggt/omakma" data-primary>omakma<span class="visually-hidden"> on GitHub</span><svg class="icon" aria-hidden="true"><use href="#i-out"/></svg></a></h3>
             <p class="summary">An opinionated setup for macOS, heavily inspired by Omakub. One command turns a fresh Mac into a fully configured, modern web development system.</p>
             <p class="body">Ghostty, Alacritty and iTerm2; Neovim with LazyVim; tmux and Zellij; lazygit, fzf, ripgrep, bat, eza and zoxide; Node, Go, Python, Ruby, PHP and Rust; MySQL, PostgreSQL and Redis if you want them. Afterwards, <code>omakma</code> opens a menu for themes, fonts and the rest.</p>
@@ -274,21 +292,6 @@
       </header>
 
       <div class="cards">
-        <article class="card card--wide" data-nav="kaze" tabindex="-1" aria-labelledby="kaze-title">
-          <div class="card-text">
-            <h3 id="kaze-title"><a href="https://github.com/cuonggt/kaze" data-primary>kaze</a></h3>
-            <p>Authentication scaffolding for a new Rails application, in the spirit of Laravel Breeze. Login, registration, password reset, email verification and a settings area, generated into the app as code you own and then edit.</p>
-            <ul class="chips" aria-label="Stacks">
-              <li>hotwire</li><li>react</li><li>vue</li>
-            </ul>
-            <div class="cmd"><span class="cmd-prompt" aria-hidden="true">$</span><code>gem install kaze</code><button class="copy" type="button" data-copy="gem install kaze" aria-label="Copy install command for kaze"><svg class="icon i-copy" aria-hidden="true"><use href="#i-copy"/></svg><svg class="icon i-check" aria-hidden="true"><use href="#i-check"/></svg></button></div>
-            <p class="meta"><span>ruby</span><span>rails</span><span>2024</span></p>
-          </div>
-          <div class="card-shot">
-            <img src="assets/media/kaze.webp" width="800" height="500" loading="lazy" decoding="async" alt="A Kaze settings page: Profile, Password and Appearance tabs beside a form for name and email, with the application’s sidebar on the left.">
-          </div>
-        </article>
-
         <article class="card card--wide" data-nav="laravel-dibi" tabindex="-1" aria-labelledby="dibi-title">
           <div class="card-text">
             <h3 id="dibi-title"><a href="https://github.com/cuonggt/laravel-dibi" data-primary>laravel-dibi</a></h3>
@@ -301,34 +304,17 @@
           </div>
         </article>
 
-        <article class="card" data-nav="shellhand" tabindex="-1" aria-labelledby="shellhand-title">
-          <h3 id="shellhand-title"><a href="https://github.com/cuonggt/shellhand" data-primary>shellhand</a></h3>
-          <p>A native macOS SSH client: a host list that inherits down its groups, tabs running the system’s own <code>ssh</code>, and files over SFTP — in a window rather than a terminal. Swift all the way down, and it wants macOS 26.</p>
-          <div class="cmd"><span class="cmd-prompt" aria-hidden="true">$</span><code>brew install <span class="nb">--cask</span> cuonggt/<wbr>tap/<wbr>shellhand</code><button class="copy" type="button" data-copy="brew install --cask cuonggt/tap/shellhand" aria-label="Copy install command for shellhand"><svg class="icon i-copy" aria-hidden="true"><use href="#i-copy"/></svg><svg class="icon i-check" aria-hidden="true"><use href="#i-check"/></svg></button></div>
-          <p class="meta"><span>swift</span><span>macos app</span><span>2026</span><span class="status">early</span></p>
-        </article>
-
-        <article class="card" data-nav="bosun" tabindex="-1" aria-labelledby="bosun-title">
-          <h3 id="bosun-title"><a href="https://github.com/cuonggt/bosun" data-primary>bosun</a></h3>
-          <p>Provision servers and deploy Laravel applications with zero downtime, straight from <code>artisan</code>.</p>
-          <ul class="chips" aria-label="Artisan commands">
-            <li>setup</li><li>deploy</li><li>rollback</li><li>secure</li><li>status</li><li>logs</li><li>ssh</li>
-          </ul>
-          <div class="cmd"><span class="cmd-prompt" aria-hidden="true">$</span><code>composer require cuonggt/<wbr>bosun</code><button class="copy" type="button" data-copy="composer require cuonggt/bosun" aria-label="Copy install command for bosun"><svg class="icon i-copy" aria-hidden="true"><use href="#i-copy"/></svg><svg class="icon i-check" aria-hidden="true"><use href="#i-check"/></svg></button></div>
-          <p class="meta"><span>php</span><span>laravel</span><span>2026</span></p>
+        <article class="card" data-nav="rove" tabindex="-1" aria-labelledby="rove-title">
+          <h3 id="rove-title"><a href="https://github.com/cuonggt/rove" data-primary>rove</a></h3>
+          <p>A terminal console for the Linux servers you already reach over SSH. It reads <code>~/.ssh/config</code> and never asks for a private key: processes, disks, services and listeners, without remembering the command for each.</p>
+          <div class="cmd"><span class="cmd-prompt" aria-hidden="true">$</span><code>brew install <span class="nb">--cask</span> cuonggt/<wbr>tap/<wbr>rove</code><button class="copy" type="button" data-copy="brew install --cask cuonggt/tap/rove" aria-label="Copy install command for rove"><svg class="icon i-copy" aria-hidden="true"><use href="#i-copy"/></svg><svg class="icon i-check" aria-hidden="true"><use href="#i-check"/></svg></button></div>
+          <p class="meta"><span>go</span><span>server console</span><span>2026</span></p>
         </article>
 
         <article class="card" data-nav="envoy-cli" tabindex="-1" aria-labelledby="envoy-title">
           <h3 id="envoy-title"><a href="https://github.com/cuonggt/envoy-cli" data-primary>envoy-cli</a></h3>
           <p>Run the tasks you run on your remote servers, deploys and the rest, from a YAML <code>Envoyfile</code> and a single binary.</p>
           <p class="meta"><span>go</span><span>cli</span><span>2023</span></p>
-        </article>
-
-        <article class="card" data-nav="hooky" tabindex="-1" aria-labelledby="hooky-title">
-          <h3 id="hooky-title"><a href="https://github.com/cuonggt/hooky" data-primary>hooky</a></h3>
-          <p>Git hooks for PHP, heavily inspired by husky: lint commit messages, lint code and run tests when you commit or push.</p>
-          <div class="cmd"><span class="cmd-prompt" aria-hidden="true">$</span><code>composer require <span class="nb">--dev</span> cuonggt/<wbr>hooky</code><button class="copy" type="button" data-copy="composer require --dev cuonggt/hooky" aria-label="Copy install command for hooky"><svg class="icon i-copy" aria-hidden="true"><use href="#i-copy"/></svg><svg class="icon i-check" aria-hidden="true"><use href="#i-check"/></svg></button></div>
-          <p class="meta"><span>php</span><span>composer</span><span>2023</span></p>
         </article>
 
         <article class="card" data-nav="reji-stripe" tabindex="-1" aria-labelledby="reji-title">
@@ -377,7 +363,7 @@
       <div class="about">
         <div class="prose">
           <p>I’m Cuong Giang, a software developer in <span lang="vi">Hà Nội</span>. I’ve kept my work on GitHub since 2014 and have published open source since 2016: Ruby gems for Rails at first, then Laravel packages, then Go, and lately some Swift.</p>
-          <p>A lot of what I build carries a good idea somewhere new. Laravel Cashier’s billing and Laravel Breeze’s starter kits, for Rails. Laravel’s Envoy, as one Go binary. husky’s git hooks, for PHP. Omakub’s opinions, for the Mac. Inertia.js, for Go.</p>
+          <p>A lot of what I build carries a good idea somewhere new. Laravel Cashier’s billing and Laravel Breeze’s starter kits, for Rails. Laravel’s Envoy, as one Go binary. Omakub’s opinions, for the Mac. Inertia.js, for Go.</p>
           <p>The rest lives between a laptop and a server: SSH clients, deploy tools, and a console for a fleet of Linux machines.</p>
         </div>
         <dl class="facts">
